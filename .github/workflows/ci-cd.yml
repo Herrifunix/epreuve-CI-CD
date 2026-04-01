@@ -88,7 +88,7 @@ jobs:
           echo "POSTGRES_DB=${{ secrets.POSTGRES_DB }}" >> .env
 
       - name: Start Staging Environment via Docker Compose
-        run: docker-compose up -d --build
+        run: docker compose up -d --build
 
       - name: Health Check Backend
         run: |
